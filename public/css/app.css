@@ -5733,49 +5733,77 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.navbar-default {
-  height: 120px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7); }
-  .navbar-default .navbar-nav > li > a {
-    margin-top: 35px;
-    color: #ffffff; }
-
 body {
+  content: "";
+  background: url("/images/background.jpeg");
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: linear-gradient(to right, rgba(245, 245, 245, 0.75), rgba(119, 136, 153, 0.75));
-  background-size: cover; }
-
-.wrapper {
+  background-size: cover;
+  position: relative;
+  display: block;
   width: 100%;
   height: 100%;
-  position: relative; }
-  .wrapper:after {
-    content: "";
-    background: url("/images/ProjectBazaar.png");
-    background-attachment: fixed;
-    opacity: 0.2;
-    background-size: 300px;
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1; }
+  top: 0;
+  left: 0;
+  z-index: -1; }
 
-.dissertation-image {
-  /* IE 9 */
-  /* Chrome, Safari, Opera */
-  transform: rotate(7deg); }
+.dropdown-menu {
+  background-color: transparent; }
+
+#navbar-default {
+  height: 95px;
+  color: white;
+  z-index: 4;
+  display: block; }
+  #navbar-default .navbar-nav > li > a {
+    margin-top: 23px;
+    padding: 10px;
+    margin-left: 10px;
+    color: #ffffff; }
+  #navbar-default .navbar-nav .btn-signup {
+    border: 2px solid #00B2A7;
+    border-radius: 10px; }
+    #navbar-default .navbar-nav .btn-signup:hover {
+      background: #00B2A7;
+      color: #ffffff; }
+    #navbar-default .navbar-nav .btn-signup:active {
+      background: #00B2A7;
+      color: #CFCFCF; }
+
+.navbar-default-blur {
+  position: relative;
+  z-index: 99999;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  padding: 0;
+  overflow: hidden; }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+  border-bottom: 1px solid #00B2A7; }
+
+.btn-turquoise {
+  background-color: #00B2A7;
+  border-radius: 5px;
+  color: #ffffff; }
+  .btn-turquoise:hover {
+    background-color: #008C83;
+    border-radius: 5px;
+    color: #ffffff; }
 
 .custom-div {
   height: 800px;
   text-align: center;
-  background-color: #F5F5F5;
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 50px;
-  color: #808080;
-  font-size: 20px; }
+  color: #ffffff;
+  font-size: 20px;
+  box-shadow: 0 0 100px 0 #000000; }
 
 .transparent-div {
   height: 800px;
@@ -5789,5 +5817,23 @@ body {
 .carousel-control.left,
 .carousel-control.right {
   background-image: none; }
+
+#blur {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  height: 250px;
+  left: 0;
+  position: fixed;
+  top: 150px;
+  width: 100%;
+  overflow: hidden; }
+
+.footer {
+  height: 500px;
+  border-top-color: 1px solid #ffffff;
+  padding-top: 150px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #000000; }
 
 /*# sourceMappingURL=app.css.map */

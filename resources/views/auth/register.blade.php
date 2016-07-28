@@ -96,7 +96,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-6 col-sm-offset-4">
-                                <button type="submit" class="btn btn-warning">
+                                <button type="submit" class="btn btn-turquoise">
                                     <i class="fa fa-btn fa-user"></i> Register
                                 </button>
                             </div>

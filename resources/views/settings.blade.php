@@ -14,7 +14,7 @@
                           <label>Update Profile Picture</label>
                           <input type="file" name="avatar"></input>
                           <input type="hidden" name="_token" value="{{ csrf_token() }}"></input>
-                          <input type="submit" class="btn btn-sm btn-warning" style="margin-top:10px;"></input>
+                          <input type="submit" class="btn btn-sm btn-turquoise" style="margin-top:10px;"></input>
                       </form>
                   </div>
                 </div>

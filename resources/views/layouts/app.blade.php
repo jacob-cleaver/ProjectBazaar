@@ -28,7 +28,11 @@
 </head>
 <body id="app-layout">
   <div class="wrapper">
-    <nav class="navbar navbar-fixed-top navbar-default navbar-static-top">
+    <div id="blur">
+      <img src="/images/pb-turquoise.png" alt="Project Bazaar" height="auto" width="200"/>
+    </div>
+      <div class="navbar-default-blur"> &nbsp; </div>
+      <nav id="navbar-default" class="navbar navbar-fixed-top navbar-static-top">
         <div class="container">
             <div class="navbar-header">
 
@@ -42,10 +46,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="/images/ProjectBazaar.png" src="/images/ProjectBazaarWriting.png" alt="Project Bazaar" height="100" width="auto"/>
-                </a>
-                <a class="navbar-brand" href="{{ url('/') }}">
-                  <img src="/images/ProjectBazaarWriting.png" alt="Project Bazaar" height="30" width="auto" margin-top="100"/>
+                    <img src="/images/pb-turquoise.png" alt="Project Bazaar" height="auto" width="80"/>
                 </a>
             </div>
 
@@ -54,9 +55,9 @@
                 <!-- Left Side Of Navbar -->
             @if (Auth::user())
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li><a href="{{ url('/projects') }}">Projects</a></li>
-                    <li><a href="{{ url('/myspace') }}">My Space</a></li>
+                    <li><a href="{{ url('/home') }}" class="btn-navbar">Home</a></li>
+                    <li><a href="{{ url('/projects') }}" class="btn-navbar">Projects</a></li>
+                    <li><a href="{{ url('/myspace') }}" class="btn-navbar">My Space</a></li>
                 </ul>
             @endif
 
@@ -64,13 +65,12 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li style="border-left:1px solid white; margin-top:30px; margin-right:20px; height:60px;">&nbsp;</li>
                         <li><a href="{{ url('/login') }}">Sign in</a></li>
-                        <li><a href="{{ url('/register') }}">Sign up</a></li>
+                        <li><a href="{{ url('/register') }}" class="btn-signup">Sign up</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
-                              <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%;">
+                              <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:35px; height:35px; position:absolute; top:10px; left:10px; border-radius:50%;">
                               {{ Auth::user()->first. " " . Auth::user()->last }} <span class="caret"></span>
                             </a>
 
@@ -89,11 +89,27 @@
     @yield('sidebar')
     @yield('content')
 
-</div>
+  </div>
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="../../../assets/cripts/jquery.mobile.custom.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+  <footer class="row">
+    <div class="col-sm-12 footer">
+      <div class="col-sm-3">
+        <img src="/images/pb-logo-turquoise.png" alt="Project Bazaar" height="auto" width="200"/>
+      </div>
+      <div class="col-sm-3">
+        Hello
+      </div>
+      <div class="col-sm-3">
+        Hello
+      </div>
+      <div class="col-sm-3">
+        Hello
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
