@@ -1,0 +1,50 @@
+@import 'variables';
+// NAVIGATION
+.dropdown-menu {
+  background-color: transparent;
+}
+
+#navbar-default {
+  color: $white;
+  display: block;
+  height: 150px;
+  z-index: 4;
+
+  .navbar-nav > li > a {
+    color: $white;
+    margin-left: 10px;
+    margin-top: 50px;
+    padding: 10px;
+  }
+}
+
+.navbar-nav {
+  .btn-signup {
+    border: 1px solid $turquoise;
+    border-radius: 7px;
+
+    &:hover {
+      background: $turquoise;
+      color: $white;
+    }
+
+    &:active {
+      background: $turquoise;
+      color: $white;
+    }
+  }
+}
+
+.navbar-nav > li > a:hover {
+  border-bottom: 1px solid $turquoise;
+  color: $white;
+}
+
+.btn-signin {
+  color: $white;
+}
+
+.btn-signin:hover {
+  background-color: transparent;
+  color: $turquoise;
+  }

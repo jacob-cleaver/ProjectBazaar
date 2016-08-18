@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-            <div class="panel panel-default">
+            <div class="panel panel-default" style="margin-top:180px;">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">

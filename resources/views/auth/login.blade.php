@@ -7,7 +7,7 @@
             <div class="panel panel-default" style="margin-top:180px;">
                 <div class="panel-heading">Sign in</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}" style="padding-top:35px; padding-bottom:20px; margin-left:-50px;">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
