@@ -1,219 +1,53 @@
 @extends('layouts.app')
 
 @section('content')
+  <div class="container">
     <div class="row">
-        <div class="col-sm-12 container main">
-            <div class="panel panel-default" style="margin-top:120px; margin-right:15px;">
-              <ul id="og-grid" class="og-grid">
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      					<li>
-      						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://placehold.it/400x800" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-      							<img src="http://placehold.it/250x500" alt="img01"/>
-      						</a>
-      					</li>
-      				</ul>
-          		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-          		<script src="js/grid.js"></script>
-          		<script>
-          			$(function() {
-          				Grid.init();
-          			});
-          		</script>
-            </div>
+      <div class="col-md-12">
+        <div class="jumbotron" style="background-color:rgba(245, 245, 245, .2); color:#fff;">
+          <h1>Welcome to My Blog!</h1>
+          <p class="lead">Thank you so much for visiting. This is my test website built with Laravel. Please read my popular post!</p>
+          <p><a class="btn btn-turquoise btn-lg" href="#" role="button">Popoular Post</a></p>
         </div>
-    </div>
+      </div>
+    </div><!-- end of row -->
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="post">
+          <h3>Post Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ...</p>
+          <a href="#" class="btn btn-turquoise">Read More</a>
+        </div>
+
+        <hr>
+
+        <div class="post">
+          <h3>Post Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ...</p>
+          <a href="#" class="btn btn-turquoise">Read More</a>
+        </div>
+
+        <hr>
+
+        <div class="post">
+          <h3>Post Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ...</p>
+          <a href="#" class="btn btn-turquoise">Read More</a>
+        </div>
+
+        <hr>
+
+        <div class="post">
+          <h3>Post Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ...</p>
+          <a href="#" class="btn btn-turquoise">Read More</a>
+        </div>
+      </div>
+      <div class="col-md-3 col-md-offset-1">
+        <h2>Sidebar</h2>
+      </div>
+    </div><!-- end of row -->
+  </div><!-- end of container -->
+
 @endsection

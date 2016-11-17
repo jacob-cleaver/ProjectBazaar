@@ -4,7 +4,7 @@
 @section('content')
     <div class="row">
         <div class="col-sm-12">
-          <div class="transparent-div" style="height:800px; margin-top:350px;">
+          <div class="transparent-div" style="height:800px;">
             <div id="carousel-example-generic" class="carousel slide col-sm-8 col-sm-offset-2 .visible-xs-* .visible-sm-* .visible-md-* .visible-lg-*" data-ride="carousel" data-interval="6000" style="height:400px;">
             <!-- Indicators -->
             <ol class="carousel-indicators">

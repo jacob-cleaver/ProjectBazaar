@@ -27,7 +27,7 @@
 <body id="app-layout">
   <div class="wrapper">
     <div class="blur">&nbsp;</div>
-      <nav id="navbar-default" class="navbar navbar-fixed-top navbar-static-top">
+      <nav id="navbar-default" class="navbar">
         <div class="container">
             <div class="navbar-header">
 
@@ -52,7 +52,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}" class="btn-navbar">Home</a></li>
                     <li><a href="{{ url('/projects') }}" class="btn-navbar">Projects</a></li>
-                    <li><a href="{{ url('/myspace') }}" class="btn-navbar">My Space</a></li>
+                    <li><a href="{{ url('/about') }}" class="btn-navbar">About</a></li>
                 </ul>
             @endif
 
