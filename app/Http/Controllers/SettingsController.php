@@ -27,6 +27,6 @@ class SettingsController extends Controller
      */
     public function index()
     {
-        return view('settings', array('user' => Auth::user()));
+        return view('pages.settings', array('user' => Auth::user()));
     }
 }

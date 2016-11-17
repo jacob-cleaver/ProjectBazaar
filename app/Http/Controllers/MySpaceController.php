@@ -25,6 +25,6 @@ class MySpaceController extends Controller
      */
     public function index()
     {
-        return view('myspace');
+        return view('pages.myspace');
     }
 }

@@ -25,6 +25,6 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view('projects');
+        return view('pages.projects');
     }
 }

@@ -25,6 +25,6 @@ class RemoveAccountController extends Controller
      */
     public function index()
     {
-        return view('removeAccounts');
+        return view('pages.removeAccounts');
     }
 }
