@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class MySpaceController extends Controller
+class AboutController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -25,6 +25,6 @@ class MySpaceController extends Controller
      */
     public function index()
     {
-        return view('pages.myspace');
+        return view('pages.about');
     }
 }

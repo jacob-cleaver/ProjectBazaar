@@ -23,7 +23,7 @@ Route::group(['middleware' => 'web'], function() {
 
     Route::get('/home', 'HomeController@index');
     Route::get('/projects', 'ProjectController@index');
-    Route::get('/myspace', 'MySpaceController@index');
+    Route::get('/about', 'AboutController@index');
     Route::get('/learnmore', 'LearnMoreController@index');
     Route::get('/settings', 'SettingsController@index');
     Route::get('/addAccounts', 'AddAccountController@index');
