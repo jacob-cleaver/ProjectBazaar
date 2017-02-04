@@ -12,7 +12,7 @@
                 <div class="panel-body">
                     Add accounts
                 </div>
-                @include('partials/_sidebar')
+                @include('partials._sidebar')
             </div>
         </div>
     </div>

@@ -22,7 +22,7 @@ Route::group(['middleware' => 'web'], function() {
     })->middleware('isAdmin');
 
     Route::get('/home', 'HomeController@index');
-    Route::get('/projects', 'ProjectController@index');
+    Route::get('/projectIdeas', 'ProjectIdeasController@index');
     Route::get('/about', 'AboutController@index');
     Route::get('/learnmore', 'LearnMoreController@index');
     Route::get('/settings', 'SettingsController@index');
@@ -30,6 +30,7 @@ Route::group(['middleware' => 'web'], function() {
     Route::get('/removeAccounts', 'RemoveAccountController@index');
     Route::get('/profile', 'UserController@profile');
     Route::post('/settings', 'UserController@update_avatar');
+    Route::resource('projects', 'ProjectController');
 });
 
 // Authentication routes...
