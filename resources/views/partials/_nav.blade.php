@@ -22,7 +22,7 @@
       @if (Auth::user())
           <ul class="nav navbar-nav">
               <li><a href="{{ url('/home') }}" class="btn-navbar">Home</a></li>
-              <li><a href="{{ url('/projects') }}" class="btn-navbar">Projects</a></li>
+              <li><a href="{{ url('/projectIdeas') }}" class="btn-navbar">Projects</a></li>
               <li><a href="{{ url('/about') }}" class="btn-navbar">About</a></li>
           </ul>
       @endif

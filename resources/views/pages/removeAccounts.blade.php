@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     Remove accounts
                 </div>
-                @include('partials/_sidebar')
+                @include('partials._sidebar')
             </div>
         </div>
     </div>
