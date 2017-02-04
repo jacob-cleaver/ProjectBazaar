@@ -1,5 +1,7 @@
 @extends('sidebar')
 
+@section('title', '| Add Accounts')
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -10,6 +12,7 @@
                 <div class="panel-body">
                     Add accounts
                 </div>
+                @include('partials/_sidebar')
             </div>
         </div>
     </div>
