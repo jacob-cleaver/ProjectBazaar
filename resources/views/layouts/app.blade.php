@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Project Bazaar @yield('title')</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
@@ -26,7 +26,6 @@
 </head>
 <body id="app-layout">
   <div class="wrapper">
-    <div class="blur">&nbsp;</div>
       <nav id="navbar-default" class="navbar">
         <div class="container">
             <div class="navbar-header">
@@ -89,18 +88,12 @@
     <script src="../../../assets/cripts/jquery.mobile.custom.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
     <footer class="row">
-      <div class="col-sm-12 footer">
-        <div class="col-sm-3">
+      <div class="col-md-12 footer">
+        <div class="col-md-3">
           <img src="/images/pb-logo-turquoise.png" alt="Project Bazaar" height="auto" width="200"/>
         </div>
-        <div class="col-sm-3">
-          Hello
-        </div>
-        <div class="col-sm-3">
-          Hello
-        </div>
-        <div class="col-sm-3">
-          Hello
+        <div class="col-md-9">
+          &copy;Jacob Cleaver - Project Bazaar Copyright 2016
         </div>
       </div>
     </footer>
