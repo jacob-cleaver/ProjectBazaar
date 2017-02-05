@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\Project;
 
 class ProjectController extends Controller
 {
@@ -25,7 +27,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('projects/create');
+        return view('projects.create');
     }
 
     /**
@@ -36,7 +38,22 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate the data to ensure there is no malicious data entered
+        $this->validate($request, array(
+          'title' => 'required|max:100',
+          'description' => 'required'
+        ));
+
+        // store in the database
+        $project = new Project;
+
+        $project->title = $request->title;
+        $project->description = $request->description;
+
+        $project->save();
+
+        //redirect to another page
+        return redirect()->route('projects.show', $project->id);
     }
 
     /**
