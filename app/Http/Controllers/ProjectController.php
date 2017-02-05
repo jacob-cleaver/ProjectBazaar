@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Project;
+use Session;
 
 class ProjectController extends Controller
 {
@@ -52,6 +53,8 @@ class ProjectController extends Controller
 
         $project->save();
 
+        Session::flash('success', 'Project successfully created!');
+
         //redirect to another page
         return redirect()->route('projects.show', $project->id);
     }
@@ -64,7 +67,7 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        //
+      return view('projects.projects');
     }
 
     /**
