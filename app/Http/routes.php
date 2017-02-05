@@ -22,7 +22,7 @@ Route::group(['middleware' => 'web'], function() {
     })->middleware('isAdmin');
 
     Route::get('home', 'HomeController@index');
-    Route::get('projectIdeas', 'ProjectIdeasController@index');
+    Route::get('projects', 'ProjectsController@index');
     Route::get('about', 'AboutController@index');
     Route::get('learnmore', 'LearnMoreController@index');
     Route::get('settings', 'SettingsController@index');

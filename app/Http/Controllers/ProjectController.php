@@ -18,7 +18,11 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        //Create a variable and store all of the created projects from the database
+        $projects = Project::all();
+
+        // Return a view and pass in the above variable
+        return view('projects.projects')->withProjects($projects);
     }
 
     /**
