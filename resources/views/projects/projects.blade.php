@@ -36,7 +36,7 @@
               <!-- 50 characters to be displayed -->
               <td>{{ substr($project->description, 0, 50) }}{{ strlen($project->description) > 50 ? "..." : "" }}</td>
               <!-- This is formating the timestamp into date and 24hr time -->
-              <td>{{ date('M j, Y H:i', strtotime($project->created_at)) }}</td>
+              <td>{{ date('M j Y H:i', strtotime($project->created_at)) }}</td>
               <td>
                 <a href="{{ route('projects.show', $project->id) }}" class="btn btn-default btn-sm">View</a>
                 <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-default btn-sm">Edit</a></td>
@@ -44,6 +44,10 @@
           @endforeach
         </tbody>
       </table>
+      <!-- Pagination -->
+      <div class="text-center">
+        {!! $projects->links() !!}
+      </div>
     </div>
   </div> <!-- end of .row -->
 

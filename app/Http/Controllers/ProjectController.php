@@ -19,7 +19,9 @@ class ProjectController extends Controller
     public function index()
     {
         //Create a variable and store all of the created projects from the database
-        $projects = Project::all();
+        //Project::paginate(10) uses laravels pagination and the 10 sets 10 items to one page
+        //orderBy('id', 'desc') is setting the projects to be shown in descending order (most recent first)
+        $projects = Project::orderBy('id', 'desc')->paginate(10);
 
         // Return a view and pass in the above variable
         return view('projects.projects')->withProjects($projects);
