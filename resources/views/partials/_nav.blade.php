@@ -21,9 +21,9 @@
           <!-- Left Side Of Navbar -->
       @if (Auth::user())
           <ul class="nav navbar-nav">
-              <li><a href="{{ url('/home') }}" class="btn-navbar">Home</a></li>
-              <li><a href="{{ url('/projects') }}" class="btn-navbar">Projects</a></li>
-              <li><a href="{{ url('/about') }}" class="btn-navbar">About</a></li>
+              <li class="{{ Request::is('/') ? "active" : "" }} btn-navbar"><a href="{{ url('/home') }}">Home</a></li>
+              <li class="{{ Request::is('/projects') ? "active" : "" }} btn-navbar"><a href="{{ url('/projects') }}">Projects</a></li>
+              <li class="{{ Request::is('/about') ? "active" : "" }} btn-navbar"><a href="{{ url('/about') }}">About</a></li>
           </ul>
       @endif
 
