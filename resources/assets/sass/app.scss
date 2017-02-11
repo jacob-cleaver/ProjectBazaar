@@ -1,2 +1,77 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import 'variables';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'thumbnail';
+@import 'navigation';
 
+body {
+  background: url('/images/background-image.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+// BUTTONS
+.btn-turquoise {
+  background-color: transparent;
+  border: 1px solid $turquoise;
+  border-radius: 7px;
+  color: $white;
+
+  &:hover {
+    background-color: $turquoise;
+    color: $white;
+  }
+}
+
+.btn-h1-spacing {
+  margin-top: 20px;
+}
+
+// DIVS
+.custom-div {
+  background-color: rgba($black, .7);
+  box-shadow: 0 0 100px 0 $black;
+  color: $white;
+  font-size: 20px;
+  height: 800px;
+  padding: 50px;
+  text-align: center;
+}
+
+.transparent-div {
+  color: $white;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 800px;
+  padding: 50px;
+  text-align: center;
+}
+
+// CAROUSEL
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+// PANEL
+.panel-default {
+  border: 0;
+
+.panel-heading {
+  background-color: rgba($grey, .2);
+  border: 0;
+  color: $white;
+}
+
+.panel {
+  background-color: rgba($container-grey, .2);
+  color: $white;
+}

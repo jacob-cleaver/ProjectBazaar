@@ -1,5 +1,7 @@
 var elixir = require('laravel-elixir');
 
+var gulp = require('gulp');
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -13,4 +15,11 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.sass('app.scss');
+});
+
+
+gulp.task('fonts', function() {
+  return gulp
+    .src('node_modules/bootstrap-sass/assets/fonts/**/*')
+    .pipe(gulp.dest('public/fonts'));
 });

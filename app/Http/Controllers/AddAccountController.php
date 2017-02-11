@@ -25,6 +25,6 @@ class AddAccountController extends Controller
      */
     public function index()
     {
-        return view('addAccounts');
+        return view('pages.addAccounts');
     }
 }

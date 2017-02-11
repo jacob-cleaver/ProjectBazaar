@@ -29,7 +29,7 @@ class UserController extends Controller
             $user->save();
         }
 
-        return view('settings', array('user' => Auth::user()));
+        return view('pages.settings', array('user' => Auth::user()));
     }
 
 }

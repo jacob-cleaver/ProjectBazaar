@@ -25,6 +25,6 @@ class LearnMoreController extends Controller
      */
     public function index()
     {
-        return view('learnmore');
+        return view('pages.learnmore');
     }
 }
