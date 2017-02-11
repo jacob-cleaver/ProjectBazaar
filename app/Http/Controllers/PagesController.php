@@ -11,7 +11,7 @@ class PagesController extends Controller {
   }
 
   public function getProjectIdeas() {
-    $projects = Project::orderBy('created_at', 'desc')->limit(4)->get();
+    $projects = Project::orderBy('created_at', 'desc')->paginate(10);
     return view('pages.projectIdeas')->withProjects($projects);
   }
 
