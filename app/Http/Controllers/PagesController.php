@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
+
 class PagesController extends Controller {
 
   public function getHome() {

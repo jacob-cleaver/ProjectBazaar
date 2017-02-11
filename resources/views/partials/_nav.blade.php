@@ -22,7 +22,7 @@
       @if (Auth::user())
           <ul class="nav navbar-nav">
               <li class="{{ Request::is('/') ? "active" : "" }} btn-navbar"><a href="{{ url('/home') }}">Home</a></li>
-              <li class="{{ Request::is('/projects') ? "active" : "" }} btn-navbar"><a href="{{ url('/projects') }}">Projects</a></li>
+              <li class="{{ Request::is('/projectIdeas') ? "active" : "" }} btn-navbar"><a href="{{ url('/projectIdeas') }}">Project Ideas</a></li>
               <li class="{{ Request::is('/about') ? "active" : "" }} btn-navbar"><a href="{{ url('/about') }}">About</a></li>
           </ul>
       @endif
