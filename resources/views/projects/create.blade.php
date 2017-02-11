@@ -9,7 +9,7 @@
       <h1>Create New Project</h1>
       <hr>
 
-      {!! Form::open(array('url' => 'projects.store')) !!}
+      {!! Form::open(array('route' => 'projects.store')) !!}
         {{ Form::label('title', 'Title:') }}
         {{ Form::text('title', null, array('class' => 'form-control')) }}
 
