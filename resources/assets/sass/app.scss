@@ -17,7 +17,6 @@ body {
   z-index: -1;
 }
 
-
 // BUTTONS
 .btn-turquoise {
   background-color: transparent;
@@ -29,6 +28,10 @@ body {
     background-color: $turquoise;
     color: $white;
   }
+}
+
+.btn-h1-spacing {
+  margin-top: 20px;
 }
 
 // DIVS
@@ -58,20 +61,6 @@ body {
   background-image: none;
 }
 
-// BLUR
-.blur {
-  background-image: url('/images/blur-logos.png');
-  background-position: center;
-  background-size: cover;
-  filter: blur(15px);
-  height: 2000px;
-  left: 0;
-  opacity: .3;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
 // PANEL
 .panel-default {
   border: 0;
@@ -85,14 +74,4 @@ body {
 .panel {
   background-color: rgba($container-grey, .2);
   color: $white;
-}
-
-// FOOTER
-.footer {
-  background-color: $black;
-  border-top-color: 1px solid $white;
-  color: $white;
-  height: 500px;
-  padding-top: 150px;
-  text-align: center;
 }

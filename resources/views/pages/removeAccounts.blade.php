@@ -1,4 +1,4 @@
-@extends('sidebar')
+@section('title', '| Remove Accounts')
 
 @section('content')
 <div class="container">
@@ -10,6 +10,7 @@
                 <div class="panel-body">
                     Remove accounts
                 </div>
+                @include('partials._sidebar')
             </div>
         </div>
     </div>

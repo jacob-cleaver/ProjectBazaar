@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('sidebar')
 <div class="container" style="position:absolute; margin-top:41px;">
     <div class="row col-sm-2">
       <nav id="sidebar-nav">
@@ -11,4 +8,3 @@
     </nav>
     </div>
 </div>
-@endsection
