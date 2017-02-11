@@ -24,7 +24,7 @@ class ProjectController extends Controller
         $projects = Project::orderBy('id', 'desc')->paginate(10);
 
         // Return a view and pass in the above variable
-        return view('projects.projects')->withProjects($projects);
+        return view('projects.index')->withProjects($projects);
     }
 
     /**

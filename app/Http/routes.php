@@ -17,20 +17,16 @@ Route::group(['middleware' => 'web'], function() {
         return view('pages.home');
     });
 
-    Route::get('access', function(){
-      echo 'You have access!';
-    })->middleware('isAdmin');
-
-    Route::get('home', 'HomeController@index');
-    Route::get('projects', 'ProjectsController@index');
-    Route::get('about', 'AboutController@index');
-    Route::get('learnmore', 'LearnMoreController@index');
-    Route::get('settings', 'SettingsController@index');
-    Route::get('addAccounts', 'AddAccountController@index');
-    Route::get('removeAccounts', 'RemoveAccountController@index');
-    Route::get('profile', 'UserController@profile');
-    Route::post('settings', 'UserController@update_avatar');
-    Route::resource('projects', 'ProjectController');
+    Route::get('home', 'PagesController@getHome');
+    Route::get('projectIdeas', 'PagesController@getProjectIdeas');
+    Route::get('about', 'PagesController@getAbout');
+    // Route::get('learnmore', 'LearnMoreController@index');
+    // Route::get('settings', 'SettingsController@index');
+    // Route::get('addAccounts', 'AddAccountController@index');
+    // Route::get('removeAccounts', 'RemoveAccountController@index');
+    // Route::get('profile', 'UserController@profile');
+    // Route::post('settings', 'UserController@update_avatar');
+    // Route::resource('projects', 'ProjectController');
 });
 
 // Authentication routes...
