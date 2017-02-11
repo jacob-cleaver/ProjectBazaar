@@ -32,6 +32,9 @@
 
             {!! Form::close() !!}
           </div>
+          <div class="col-sm-12">
+            <a href="{{ route('projects.index') }}" class="btn btn-default btn-block">Back</a>
+          </div>
         </div>
       </div>
     </div>
