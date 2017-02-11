@@ -3,7 +3,7 @@
 @section('title', '| Projects')
 
 @section('content')
-  <!-- <div class="container"> -->
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="jumbotron" style="background-color:rgba(245, 245, 245, .2); color:#fff;">
@@ -19,7 +19,6 @@
 
         @foreach($projects as $project)
 
-
         <div class="post">
           <h3>{{ $project->title }}</h3>
           <p>{{ $project->description}}</p>
@@ -28,13 +27,18 @@
 
         <hr>
 
-        @endforeach
+      @endforeach
 
       </div>
       <div class="col-md-3 col-md-offset-1">
         <h2>Sidebar</h2>
       </div>
     </div><!-- end of row -->
-  <!-- </div> end of container -->
+  </div><!-- end of container -->
+
+  <!-- Pagination -->
+  <div class="text-center">
+    {!! $projects->links() !!}
+  </div>
 
 @endsection
