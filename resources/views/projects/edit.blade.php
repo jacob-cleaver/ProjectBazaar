@@ -12,6 +12,9 @@
     {{ Form::label('title', 'Project Title:') }}
     {{ Form::text('title', null, ['class' => 'form-control input-lg']) }}
 
+    {{ Form::label('slug', 'Slug:') }}
+    {{ Form::text('slug', null, ['class' => 'form-control']) }}
+
     {{ Form::label('description', 'Description:')}}
     {{ Form::textarea('description', null, ['class' => 'form-control']) }}
   </div>

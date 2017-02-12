@@ -11,7 +11,10 @@
 
       {!! Form::open(array('route' => 'projects.store')) !!}
         {{ Form::label('title', 'Title:') }}
-        {{ Form::text('title', null, array('class' => 'form-control')) }}
+        {{ Form::text('title', null, array('class' => 'form-control inout-lg')) }}
+
+        {{ Form::label('slug', 'Slug:') }}
+        {{ Form::text('slug', null, array('class' => 'form-control')) }}
 
         {{ Form::label('description', 'Project Description:') }}
         {{ Form::textarea('description', null, array('class' => 'form-control')) }}

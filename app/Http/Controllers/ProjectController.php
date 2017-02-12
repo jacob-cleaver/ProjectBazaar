@@ -47,7 +47,8 @@ class ProjectController extends Controller
     {
         // validate the data to ensure there is no malicious data entered
         $this->validate($request, array(
-          'title' => 'required|max:100',
+          'title'       => 'required|max:100',
+          'slug'        => 'required|alpha_dash|min:5|max:255|unique:projects,slug',
           'description' => 'required'
         ));
 
@@ -55,6 +56,7 @@ class ProjectController extends Controller
         $project = new Project;
 
         $project->title = $request->title;
+        $project->slug = $request->slug;
         $project->description = $request->description;
 
         $project->save();
@@ -102,14 +104,26 @@ class ProjectController extends Controller
     public function update(Request $request, $id)
     {
         // Validate the data
-        $this->validate($request, array(
-          'title' => 'required|max:100',
-          'description' => 'required'
-        ));
+        // The if statement is allowing for the unique validation to work when updating a project idea
+        // This has been done by including the slug validation if it is a new project and not including for the update
+        $project = Project::find($id);
+        if ($request->input('slug') == $project->slug) {
+          $this->validate($request, array(
+            'title'       => 'required|max:100',
+            'description' => 'required'
+          ));
+        } else {
+          $this->validate($request, array(
+            'title'       => 'required|max:100',
+            'slug'        => 'required|alpha_dash|min:5|max:255|unique:projects,slug',
+            'description' => 'required'
+          ));
+        }
 
         // Save the data to the database
         $project = Project::find($id);
         $project->title = $request->input('title');
+        $project->slug = $request->input('slug');
         $project->description = $request->input('description');
 
         $project->save();

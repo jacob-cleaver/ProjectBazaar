@@ -16,17 +16,20 @@ Route::group(['middleware' => 'web'], function() {
     Route::get('/', function () {
         return view('pages.home');
     });
-
+    Route::get('project-bazaar/{slug}', ['as' => 'project.list', 'uses' => 'ProjectIdeasController@getIdea'])
+    // \w=any word charar | \d=any number character | \-=dash charcter | \_=underscore character ----- anything outside of these charcters will
+    // be rejected
+      ->where('slug', '[\w\d\-\_]+');
     Route::get('home', 'PagesController@getHome');
     Route::get('projectIdeas', 'PagesController@getProjectIdeas');
     Route::get('about', 'PagesController@getAbout');
-    // Route::get('learnmore', 'LearnMoreController@index');
+    Route::get('learnmore', 'PagesController@getLearnMore');
     // Route::get('settings', 'SettingsController@index');
     // Route::get('addAccounts', 'AddAccountController@index');
     // Route::get('removeAccounts', 'RemoveAccountController@index');
-    // Route::get('profile', 'UserController@profile');
-    // Route::post('settings', 'UserController@update_avatar');
-    // Route::resource('projects', 'ProjectController');
+    Route::get('profile', 'UserController@profile');
+    Route::post('settings', 'UserController@update_avatar');
+    Route::resource('projects', 'ProjectController');
 });
 
 // Authentication routes...

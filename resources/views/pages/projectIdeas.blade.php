@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="jumbotron" style="background-color:rgba(245, 245, 245, .2); color:#fff;">
-          <h1>Welcome to My Blog!</h1>
+          <h1>Project Ideas!</h1>
           <p class="lead">Thank you so much for visiting. This is my test website built with Laravel. Please read my popular post!</p>
           <p><a class="btn btn-turquoise btn-lg" href="#" role="button">Popoular Post</a></p>
         </div>
@@ -21,8 +21,8 @@
 
         <div class="post">
           <h3>{{ $project->title }}</h3>
-          <p>{{ $project->description}}</p>
-          <a href="#" class="btn btn-turquoise">Read More</a>
+          <p>{{ substr($project->description, 0, 300) }}{{ strlen($project->description) > 300 ? "..." : "" }}</p>
+          <a href="{{ url('project-bazaar', $project->slug) }}" class="btn btn-turquoise">Find Out More</a>
         </div>
 
         <hr>

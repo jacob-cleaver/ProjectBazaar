@@ -11,10 +11,16 @@
 
     <div class="col-md-4">
       <div class="well">
-        <dl class="dl-horizontal">
-          <dt>Created At:</dt>
+        <dl class="dl-horizontal text-center">
+          <label>Url:</label>
           <!-- REFERENCE TO PHP TIME AND DATE WEBSITE -->
-          <dd>{{ date('M j Y H:i', strtotime($project->created_at)) }}</dd>
+          <a href="{{ url('project-bazaar', $project->slug) }}">{{url('project-bazaar', $project->slug)}}</a>
+        </dl>
+
+        <dl class="dl-horizontal">
+        <dt>Created At:</dt>
+        <!-- REFERENCE TO PHP TIME AND DATE WEBSITE -->
+        <dd>{{ date('M j Y H:i', strtotime($project->created_at)) }}</dd>
         </dl>
 
         <dl class="dl-horizontal">
