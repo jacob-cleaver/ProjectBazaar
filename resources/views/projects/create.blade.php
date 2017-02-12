@@ -16,6 +16,9 @@
         {{ Form::label('slug', 'Slug:') }}
         {{ Form::text('slug', null, array('class' => 'form-control')) }}
 
+        {{ Form::label('category_id', 'Category:') }}
+        {{ Form::select('category_id', $categories, null, ['class' => 'form-control']) }}
+
         {{ Form::label('description', 'Project Description:') }}
         {{ Form::textarea('description', null, array('class' => 'form-control')) }}
 

@@ -23,4 +23,8 @@ class PagesController extends Controller {
     return view('pages.learnmore');
   }
 
+  public function getProfile() {
+    return view('pages.profile');
+  }
+
 }

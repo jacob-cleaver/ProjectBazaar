@@ -1,31 +1,39 @@
 @extends('layouts.main')
 
-@section('title', '| New Project')
+@section('title', "| $project->title")
 
 @section('content')
   <div class="row">
     <div class="col-md-8">
        <h1>{{ $project->title }}</h1>
        <p class="lead">{{ $project->description }}</p>
+       <hr>
+       <p>Category: {{ $project->category->name }}</p>
     </div>
 
     <div class="col-md-4">
       <div class="well">
-        <dl class="dl-horizontal text-center">
-          <label>Url:</label>
+        <dl class="dl-horizontal">
+          <label>Url: </label>
           <!-- REFERENCE TO PHP TIME AND DATE WEBSITE -->
-          <a href="{{ url('project-bazaar', $project->slug) }}">{{url('project-bazaar', $project->slug)}}</a>
+          <p><a href="{{ url('project-bazaar', $project->slug) }}">{{url('project-bazaar', $project->slug)}}</a></p>
         </dl>
 
         <dl class="dl-horizontal">
-        <dt>Created At:</dt>
+        <label>Category: </label>
         <!-- REFERENCE TO PHP TIME AND DATE WEBSITE -->
-        <dd>{{ date('M j Y H:i', strtotime($project->created_at)) }}</dd>
+        <p>{{ $project->category->name }}</p>
         </dl>
 
         <dl class="dl-horizontal">
-          <dt>Last Updated At:</dt>
-          <dd>{{ date('M j Y H:i', strtotime($project->updated_at)) }}</dd>
+        <label>Created At: </label>
+        <!-- REFERENCE TO PHP TIME AND DATE WEBSITE -->
+        <p>{{ date('M j Y H:i', strtotime($project->created_at)) }}</p>
+        </dl>
+
+        <dl class="dl-horizontal">
+          <label>Last Updated At: </label>
+          <p>{{ date('M j Y H:i', strtotime($project->updated_at)) }}</p>
         </dl>
         <hr>
         <div class="row">

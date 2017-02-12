@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Project;
+use App\Category;
 use Session;
 
 class ProjectController extends Controller
@@ -38,7 +39,12 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('projects.create');
+        $categories = Category::all();
+        $cats = array();
+        foreach ($categories as $category) {
+          $cats[$category->id] = $category->name;
+        }
+        return view('projects.create')->withCategories($cats);
     }
 
     /**
@@ -53,6 +59,7 @@ class ProjectController extends Controller
         $this->validate($request, array(
           'title'       => 'required|max:100',
           'slug'        => 'required|alpha_dash|min:5|max:255|unique:projects,slug',
+          'category_id' => 'required|integer',
           'description' => 'required'
         ));
 
@@ -61,6 +68,7 @@ class ProjectController extends Controller
 
         $project->title = $request->title;
         $project->slug = $request->slug;
+        $project->category_id = $request->category_id;
         $project->description = $request->description;
 
         $project->save();
@@ -93,9 +101,14 @@ class ProjectController extends Controller
     {
         // Find project in the database and save as a variable
         $project = Project::find($id);
+        $categories = Category::all();
+        $cats = array();
+        foreach ($categories as $category) {
+          $cats[$category->id] = $category->name;
+        }
 
         // Return the view and pass in the variable
-        return view('projects.edit')->withProject($project);
+        return view('projects.edit')->withProject($project)->withCategories($cats);
     }
 
     /**
@@ -114,12 +127,14 @@ class ProjectController extends Controller
         if ($request->input('slug') == $project->slug) {
           $this->validate($request, array(
             'title'       => 'required|max:100',
+            'category_id' => 'required|integer',
             'description' => 'required'
           ));
         } else {
           $this->validate($request, array(
             'title'       => 'required|max:100',
             'slug'        => 'required|alpha_dash|min:5|max:255|unique:projects,slug',
+            'category_id' => 'required|integer',
             'description' => 'required'
           ));
         }
@@ -128,6 +143,7 @@ class ProjectController extends Controller
         $project = Project::find($id);
         $project->title = $request->input('title');
         $project->slug = $request->input('slug');
+        $project->category_id = $request->input('category_id');
         $project->description = $request->input('description');
 
         $project->save();

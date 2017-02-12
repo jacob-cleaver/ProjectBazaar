@@ -39,7 +39,8 @@
                       </a>
 
                       <ul class="dropdown-menu" role="menu">
-                          <li><a href="{{ url('/projects') }}"><i class="fa fa-btn fa-lightbulb-o"></i>Project Ideas</a></li>
+                          <li><a href="{{ route('projects.index') }}"><i class="fa fa-btn fa-lightbulb-o"></i>Project Ideas</a></li>
+                          <li><a href="{{ route('categories.index') }}"><i class="fa fa-btn fa-list-alt"></i>Categories</a></li>
                           <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i>Profile</a></li>
                           <li><a href="{{ url('/settings') }}"><i class="fa fa-btn fa-cog"></i>Settings</a></li>
                           <li role="separator" class="divider"></li>

@@ -1,4 +1,4 @@
-@extends('layouts.main')
+<!-- @extends('layouts.main')
 
 @section('title', '| Project Ideas')
 
@@ -21,4 +21,4 @@
   </div>
 @endforeach
 
-@endsection
+@endsection -->
