@@ -34,7 +34,7 @@
               <td>{{ $project->title }}</td>
               <!-- This is pulling in the project description from the databse and setting the description length to -->
               <!-- 50 characters to be displayed -->
-              <td>{{ substr($project->description, 0, 300) }}{{ strlen($project->description) > 300 ? "..." : "" }}</td>
+              <td>{{ substr($project->description, 0, 50) }}{{ strlen($project->description) > 50 ? "..." : "" }}</td>
               <!-- This is formating the timestamp into date and 24hr time -->
               <td>{{ date('M j Y H:i', strtotime($project->created_at)) }}</td>
               <td>

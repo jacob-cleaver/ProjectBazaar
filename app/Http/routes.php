@@ -16,6 +16,19 @@ Route::group(['middleware' => 'web'], function() {
     Route::get('/', function () {
         return view('pages.home');
     });
+
+    // Authentication Routes
+    // Route::get('auth/login', 'Auth\AuthController@getLogin');
+    // Route::post('auth/login', 'Auth\AuthController@postLogin');
+    // Route::get('auth/logout', 'Auth\AuthController@getLogout');
+    //
+    // // Registration Routes
+    // Route::get('auth/register', 'Auth\AuthController@getRegister');
+    // Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+    Route::auth();
+
+    // Page Routes
     Route::get('project-bazaar/{slug}', ['as' => 'project.list', 'uses' => 'ProjectIdeasController@getIdea'])
     // \w=any word charar | \d=any number character | \-=dash charcter | \_=underscore character ----- anything outside of these charcters will
     // be rejected
@@ -31,14 +44,3 @@ Route::group(['middleware' => 'web'], function() {
     Route::post('settings', 'UserController@update_avatar');
     Route::resource('projects', 'ProjectController');
 });
-
-// Authentication routes...
-    Route::get('auth/login', 'Auth\AuthController@getLogin');
-    Route::post('auth/login', 'Auth\AuthController@postLogin');
-    Route::get('auth/logout', 'Auth\AuthController@getLogout');
-
-// Registration routes...
-    Route::get('auth/register', 'Auth\AuthController@getRegister');
-    Route::post('auth/register', 'Auth\AuthController@postRegister');
-
-    Route::auth();

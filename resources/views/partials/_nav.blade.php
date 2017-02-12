@@ -19,19 +19,17 @@
 
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
           <!-- Left Side Of Navbar -->
-      @if (Auth::user())
           <ul class="nav navbar-nav">
               <li class="{{ Request::is('/') ? "active" : "" }} btn-navbar"><a href="{{ url('/home') }}">Home</a></li>
               <li class="{{ Request::is('/projectIdeas') ? "active" : "" }} btn-navbar"><a href="{{ url('/projectIdeas') }}">Project Ideas</a></li>
               <li class="{{ Request::is('/about') ? "active" : "" }} btn-navbar"><a href="{{ url('/about') }}">About</a></li>
           </ul>
-      @endif
 
           <!-- Right Side Of Navbar -->
           <ul class="nav navbar-nav navbar-right">
               <!-- Authentication Links -->
               @if (Auth::guest())
-                  <li><a href="{{ url('/login') }}" class="btn-signin">Sign in</a></li>
+                  <li><a href="{{ url('/login') }}" class="btn-signin">Login</a></li>
                   <li><a href="{{ url('/register') }}" class="btn-signup">Sign up</a></li>
               @else
                   <li class="dropdown">
