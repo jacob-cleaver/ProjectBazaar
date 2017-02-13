@@ -20,9 +20,17 @@
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
           <!-- Left Side Of Navbar -->
           <ul class="nav navbar-nav">
+            @if (Auth::guest())
               <li class="{{ Request::is('/') ? "active" : "" }} btn-navbar"><a href="{{ url('/home') }}">Home</a></li>
               <li class="{{ Request::is('/projectIdeas') ? "active" : "" }} btn-navbar"><a href="{{ url('/projectIdeas') }}">Project Ideas</a></li>
               <li class="{{ Request::is('/about') ? "active" : "" }} btn-navbar"><a href="{{ url('/about') }}">About</a></li>
+            @else
+              <li class="{{ Request::is('/') ? "active" : "" }} btn-navbar"><a href="{{ url('/home') }}">Home</a></li>
+              <li class="{{ Request::is('/projectIdeas') ? "active" : "" }} btn-navbar"><a href="{{ url('/projectIdeas') }}">Project Ideas</a></li>
+              <li><a href="{{ route('projects.index') }}"><i class="fa fa-btn fa-lightbulb-o"></i>Project Ideas</a></li>
+              <li><a href="{{ route('courses.index') }}"><i class="fa fa-btn fa-list-alt"></i>Courses</a></li>
+              <li class="{{ Request::is('/about') ? "active" : "" }} btn-navbar"><a href="{{ url('/about') }}">About</a></li>
+            @endif
           </ul>
 
           <!-- Right Side Of Navbar -->
@@ -39,8 +47,6 @@
                       </a>
 
                       <ul class="dropdown-menu" role="menu">
-                          <li><a href="{{ route('projects.index') }}"><i class="fa fa-btn fa-lightbulb-o"></i>Project Ideas</a></li>
-                          <li><a href="{{ route('courses.index') }}"><i class="fa fa-btn fa-list-alt"></i>Courses</a></li>
                           <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i>Profile</a></li>
                           <li><a href="{{ url('/settings') }}"><i class="fa fa-btn fa-cog"></i>Settings</a></li>
                           <li role="separator" class="divider"></li>
