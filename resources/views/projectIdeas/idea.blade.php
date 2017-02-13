@@ -10,7 +10,7 @@
       <h1>{{ $project->title }}</h1>
       <p>{{ $project->description }}</p>
       <hr>
-      <p>Category: {{ $project->category->name }}</p>
+      <p>Course: {{ $project->course->name }}</p>
     </div>
   </div>
 

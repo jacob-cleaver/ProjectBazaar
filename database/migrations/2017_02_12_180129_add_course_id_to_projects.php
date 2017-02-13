@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoriesTable extends Migration
+class AddCourseIdToProjects extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,8 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->timestamps();
+        Schema::table('projects', function (Blueprint $table) {
+            $table->integer('course_id')->nullable()->after('slug')->unsigned();
         });
     }
 
@@ -26,6 +24,8 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('categories');
+        Schema::table('projects', function (Blueprint $table) {
+            $table->dropColumn('course_id');
+        });
     }
 }

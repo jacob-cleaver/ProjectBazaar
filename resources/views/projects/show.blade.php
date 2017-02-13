@@ -8,7 +8,7 @@
        <h1>{{ $project->title }}</h1>
        <p class="lead">{{ $project->description }}</p>
        <hr>
-       <p>Category: {{ $project->category->name }}</p>
+       <p>Course: {{ $project->course->name }}</p>
     </div>
 
     <div class="col-md-4">
@@ -16,13 +16,13 @@
         <dl class="dl-horizontal">
           <label>Url: </label>
           <!-- REFERENCE TO PHP TIME AND DATE WEBSITE -->
-          <p><a href="{{ url('project-bazaar', $project->slug) }}">{{url('project-bazaar', $project->slug)}}</a></p>
+          <p><a href="{{ url('project-bazaar', $project->slug) }}">{{ url('project-bazaar', $project->slug) }}</a></p>
         </dl>
 
         <dl class="dl-horizontal">
-        <label>Category: </label>
+        <label>Course: </label>
         <!-- REFERENCE TO PHP TIME AND DATE WEBSITE -->
-        <p>{{ $project->category->name }}</p>
+        <p>{{ $project->course->name }}</p>
         </dl>
 
         <dl class="dl-horizontal">

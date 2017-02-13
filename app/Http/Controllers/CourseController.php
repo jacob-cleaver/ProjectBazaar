@@ -5,14 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Tag;
+use App\Course;
 use Session;
 
-class TagController extends Controller
+class CourseController extends Controller
 {
-    public function __construct() {
-      $this->middleware('auth');
-    }
+
+  public function __construct() {
+    $this->middleware('auth');
+  }
     /**
      * Display a listing of the resource.
      *
@@ -20,8 +21,9 @@ class TagController extends Controller
      */
     public function index()
     {
-        $tags = Tag::all();
-        return view('tags.index')->withTags($tags);
+        // Display a view of all the courses and a form to create a new course
+        $courses = Course::all();
+        return view('courses.index')->withCourses($courses);
     }
 
     /**
@@ -32,14 +34,18 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, array('name' => 'required|max:255|unique:tags,name'));
-        $tag = new Tag;
-        $tag->name = $request->name;
-        $tag->save();
+        // Save a new course and then redirect back to index
+        $this->validate($request, array(
+          'name' => 'required|max:255|unique:courses,name'
+        ));
 
-        Session::flash('success', 'New Tag was successfully created!');
+        $course = new Course;
+        $course->name = $request->name;
+        $course->save();
 
-        return redirect()->route('tags.index');
+        Session::flash('success', 'New Course has been created');
+
+        return redirect()->route('courses.index');
     }
 
     /**

@@ -16,8 +16,12 @@
         {{ Form::label('slug', 'Slug:') }}
         {{ Form::text('slug', null, array('class' => 'form-control')) }}
 
-        {{ Form::label('category_id', 'Category:') }}
-        {{ Form::select('category_id', $categories, null, ['class' => 'form-control']) }}
+        {{ Form::label('course_id', 'Course:') }}
+        <select class="form-control" name="course_id">
+          @foreach($courses as $course)
+            <option value="{{ $course->id }}">{{ $course->name }}</option>
+          @endforeach
+        </select>
 
         {{ Form::label('description', 'Project Description:') }}
         {{ Form::textarea('description', null, array('class' => 'form-control')) }}

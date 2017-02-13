@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
-@section('title', '| Tags')
+@section('title', '| Courses')
 
 @section('content')
 
   <div class="row">
     <div class="col-md-8">
-      <h1>Tags</h1>
+      <h1>Courses</h1>
       <table class="table">
         <thread>
           <tr>
@@ -17,10 +17,10 @@
         </thread>
 
         <tbody>
-          @foreach ($tags as $tag)
+          @foreach ($courses as $course)
           <tr>
-            <th>{{ $tag->id }}</th>
-            <td>{{ $tag->name }}</td>
+            <th>{{ $course->id }}</th>
+            <td>{{ $course->name }}</td>
           </tr>
           @endforeach
         </tbody>
@@ -29,11 +29,11 @@
 
     <div class="col-md-3">
       <div class="well">
-        {!! Form::open(['route' => 'tags.store']) !!}
-        <h2>New Tag</h2>
+        {!! Form::open(['route' => 'courses.store']) !!}
+        <h2>New Course</h2>
         {{ Form::label('name', 'Name:') }}
         {{ Form::text('name', null, ['class' => 'form-control']) }}
-        {{Form::submit('Create New Tag', ['class' => 'btn btn-primary btn-block']) }}
+        {{Form::submit('Create New Course', ['class' => 'btn btn-primary btn-block']) }}
       </div>
     </div> <!-- end of col-md-3 -->
   </div> <!-- end of row -->

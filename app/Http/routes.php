@@ -39,13 +39,8 @@ Route::group(['middleware' => 'web'], function() {
     // Projects
     Route::resource('projects', 'ProjectController');
 
-    // Categories
-    // A route for create is not wanted therefore it an parameter has been set to not include a create for the categories
+    // Courses
+    // A route for create is not wanted therefore it an parameter has been set to not include a create for the courses
     // This will avoid an error if a user manages to type the url in as it will no longer exist
-    Route::resource('categories', 'CategoryController', ['except' => ['create']]);
-
-    // Tags
-    // A route for create is not wanted therefore it an parameter has been set to not include a create for the tags
-    // This will avoid an error if a user manages to type the url in as it will no longer exist
-    Route::resource('tags', 'TagController', ['except' => ['create']]);
+    Route::resource('courses', 'CourseController', ['except' => ['create']]);
 });
