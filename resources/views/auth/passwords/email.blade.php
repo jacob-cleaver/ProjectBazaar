@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
-<!-- Main Content -->
+@section('title', '| Forgot Your Password')
+
 @section('content')
 <div class="container">
     <div class="row">

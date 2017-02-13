@@ -12,6 +12,16 @@
     {{ Form::label('title', 'Project Title:') }}
     {{ Form::text('title', null, ['class' => 'form-control input-lg']) }}
 
+    {{ Form::label('slug', 'Slug:') }}
+    {{ Form::text('slug', null, ['class' => 'form-control']) }}
+
+    {{ Form::label('course_id', 'Course:') }}
+    <select class="form-control" name="course_id">
+      @foreach($courses as $course)
+        <option value="{{ $course->id }}">{{ $course->name }}</option>
+      @endforeach
+    </select>
+
     {{ Form::label('description', 'Description:')}}
     {{ Form::textarea('description', null, ['class' => 'form-control']) }}
   </div>
@@ -19,14 +29,14 @@
   <div class="col-md-4">
     <div class="well">
       <dl class="dl-horizontal">
-        <dt>Created At:</dt>
+        <label>Created At: </label>
         <!-- REFERENCE TO PHP TIME AND DATE WEBSITE -->
-        <dd>{{ date('M j Y H:i', strtotime($project->created_at)) }}</dd>
+        <p>{{ date('M j Y H:i', strtotime($project->created_at)) }}</p>
       </dl>
 
       <dl class="dl-horizontal">
-        <dt>Last Updated At:</dt>
-        <dd>{{ date('M j Y H:i', strtotime($project->updated_at)) }}</dd>
+        <label>Last Updated At: </label>
+        <p>{{ date('M j Y H:i', strtotime($project->updated_at)) }}</p>
       </dl>
       <hr>
       <div class="row">
