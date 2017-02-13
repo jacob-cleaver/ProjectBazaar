@@ -19,6 +19,7 @@
         {{ Form::label('course_id', 'Course:') }}
         <select class="form-control" name="course_id">
           @foreach($courses as $course)
+            <option value="Select Course">Select Course</option>
             <option value="{{ $course->id }}">{{ $course->name }}</option>
           @endforeach
         </select>
