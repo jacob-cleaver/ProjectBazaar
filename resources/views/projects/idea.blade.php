@@ -14,4 +14,29 @@
     </div>
   </div>
 
+  <div class="row">
+    <div id="comment-form" class="col-md-8 col-md-offset-2">
+      {{ Form::open(['route' => ['comments.store', $project->id, 'method' => 'POST']]) }}
+
+        <div class="row">
+          <div class="col-md-6">
+            {{ Form::label('name', "Name:") }}
+            {{ Form::text('name', null, ['class' => 'form-control']) }}
+          </div>
+
+          <div class="col-md-6">
+            {{ Form::label('email', "Email:") }}
+            {{ Form::text('email', null, ['class' => 'form-control']) }}
+          </div>
+
+          <div class="col-md-12">
+            {{ Form::label('comment', "Comment:") }}
+            {{ Form::textarea('comment', null, ['class' => 'form-control']) }}
+
+            {{ Form::submit('Add Comment', ['class' =>  'btn btn-primary btn-block']) }}
+          </div>
+        </div>
+    </div>
+  </div>
+
 @endsection

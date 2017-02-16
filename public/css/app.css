@@ -5734,7 +5734,7 @@ button.close {
     display: none !important; } }
 
 body {
-  background: url("/images/background-image.jpg");
+  background: black;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
