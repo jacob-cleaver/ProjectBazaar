@@ -31,7 +31,7 @@
 
           <div class="col-md-12">
             {{ Form::label('comment', "Comment:") }}
-            {{ Form::textarea('comment', null, ['class' => 'form-control']) }}
+            {{ Form::textarea('comment', null, ['class' => 'form-control', 'rows' => '5']) }}
 
             {{ Form::submit('Add Comment', ['class' =>  'btn btn-primary btn-block']) }}
           </div>
