@@ -20,7 +20,7 @@ Route::group(['middleware' => 'web'], function() {
     Route::auth();
 
     // Slug Routes
-    Route::get('project-bazaar/{slug}', ['as' => 'project.list', 'uses' => 'ProjectIdeasController@getIdea'])
+    Route::get('project-bazaar/{slug}', ['as' => 'projects.idea', 'uses' => 'ProjectIdeasController@getIdea'])
     // \w=any word charar | \d=any number character | \-=dash charcter | \_=underscore character ----- anything outside of these charcters will
     // be rejected
       ->where('slug', '[\w\d\-\_]+');
