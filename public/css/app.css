@@ -5858,4 +5858,44 @@ body {
   padding-top: 150px;
   text-align: center; }
 
+.comment {
+  margin-bottom: 50px;
+}
+
+.comment-title {
+  margin-bottom: 45px;
+}
+
+.comment-title>span {
+  margin-right: 15px;
+}
+
+.author-image {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  float: left;
+}
+
+.author-name {
+  float: left;
+  margin-left: 25px;
+}
+
+.author-name>h4 {
+  margin: 0px 0px;
+}
+
+.author-time {
+  font-size: 11px;
+  font-style: italic;
+  color: #aaa;
+}
+
+.comment-content {
+  clear: both;
+  margin-left: 75px;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
 /*# sourceMappingURL=app.css.map */
