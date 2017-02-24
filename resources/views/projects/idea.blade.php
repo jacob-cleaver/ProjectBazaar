@@ -9,8 +9,21 @@
     <div class="col-md-8 col-md-offset-2">
       <h1>{{ $project->title }}</h1>
       <p>{{ $project->description }}</p>
-      <hr>
+      <br/>
       <p>Course: {{ $project->course->name }}</p>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      @foreach($project->comments as $comment)
+        <div class="comment">
+          <p><strong>Name:</strong> {{ $comment->name }}</p>
+          <p><strong>Comment:</strong> <br/>{{ $comment->comment }}</p>
+          <hr>
+        </div>
+      @endforeach
     </div>
   </div>
 
