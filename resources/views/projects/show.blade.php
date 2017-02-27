@@ -10,16 +10,16 @@
        <hr>
        <p>Course: {{ $project->course->name }}</p>
 
-      <div id='backend-comments' style="margin-top: 50px;"
+      <div id='backend-comments' style="margin-top: 50px;">
         <h3>Comments <small>{{ $project->comments->count() }} total</small></h3>
 
         <table class="table">
           <thead>
             <tr>
-              <th>Name:</th>
-              <th>Email:</th>
-              <th>Comment:</th>
-              <th></th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Comment</th>
+              <th width="70px"></th>
             </tr>
           </thead>
 
@@ -30,14 +30,14 @@
                 <td>{{ $comment->email }}</td>
                 <td>{{ $comment->comment }}</td>
                 <td>
-                  <a href="#" class="btn btn-xs btn-primary fa fa-pencil"></a>
-                  <a href="#" class="btn btn-xs btn-danger fa fa-trash"></a>
+                  <a href="{{ route('comments.edit', $comment->id) }}" class="btn btn-xs btn-primary fa fa-pencil"></a>
+                  <a href="{{ route('comments.delete', $comment->id) }}" class="btn btn-xs btn-danger fa fa-trash"></a>
                 </td>
               </tr>
             @endforeach
           </tbody>
         </table>
-      <div>
+      </div>
     </div>
 
     <div class="col-md-4">
