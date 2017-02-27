@@ -1,9 +1,9 @@
 <!-- @extends('layouts.main') -->
 
 <!-- The use of "" over '' allows for variables to interpolated -->
-<!-- @section('title', "| $project->title") -->
+<!-- @section('title', "| $project->title")
 
-<!-- @section('content')
+@section('content')
 
   <div class="row">
     <div class="col-md-8 col-md-offset-2">

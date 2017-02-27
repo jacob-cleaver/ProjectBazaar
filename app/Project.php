@@ -10,4 +10,8 @@ class Project extends Model
   public function course() {
     return $this->belongsTo('App\Course');
   }
+
+  public function comments() {
+    return $this->hasMany('App\Comment');
+  }
 }
