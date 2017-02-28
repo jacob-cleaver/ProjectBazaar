@@ -2,6 +2,17 @@
 
 @section('title', '| Create New Project')
 
+@section('stylesheets')
+  <!-- WYSIWYG Editor -->
+  <script src="//cloud.tinymce.com/stable/tinymce.min.js"></script>
+
+  <script>
+    tinymce.init({
+      selector: 'textarea'
+    });
+  </script>
+@endsection
+
 @section('content')
 
   <div class="row">
@@ -18,8 +29,8 @@
 
         {{ Form::label('course_id', 'Course:') }}
         <select class="form-control" name="course_id">
+          <option value="" disabled selected>Please select a course</option>
           @foreach($courses as $course)
-            <option value="" disabled selected>Select Course</option>
             <option value="{{ $course->id }}">{{ $course->name }}</option>
           @endforeach
         </select>
