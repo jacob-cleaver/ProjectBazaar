@@ -10,6 +10,7 @@
     "bootstrap-sass": "^3.0.0"
   },
   "dependencies": {
-    "awesome-bootstrap-checkbox": "^1.0.0-alpha.4"
+    "awesome-bootstrap-checkbox": "^1.0.0-alpha.4",
+    "gulp-sass": "^3.1.0"
   }
 }

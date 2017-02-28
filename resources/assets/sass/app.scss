@@ -2,6 +2,7 @@
 @import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 @import 'thumbnail';
 @import 'navigation';
+@import 'comments';
 
 body {
   background: url('/images/background-image.jpg');
@@ -65,13 +66,14 @@ body {
 .panel-default {
   border: 0;
 
-.panel-heading {
-  background-color: rgba($grey, .2);
-  border: 0;
-  color: $white;
-}
+  .panel-heading {
+    background-color: rgba($grey, .2);
+    border: 0;
+    color: $white;
+  }
 
-.panel {
-  background-color: rgba($container-grey, .2);
-  color: $white;
+  .panel {
+    background-color: rgba($container-grey, .2);
+    color: $white;
+  }
 }

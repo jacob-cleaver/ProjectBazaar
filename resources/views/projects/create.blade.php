@@ -22,9 +22,9 @@
 
       {!! Form::open(array('route' => 'projects.store')) !!}
         {{ Form::label('title', 'Title:') }}
-        {{ Form::text('title', null, array('class' => 'form-control inout-lg')) }}
+        {{ Form::text('title', null, array('class' => 'form-control input-lg')) }}
 
-        {{ Form::label('slug', 'Slug:') }}
+        {{ Form::label('slug', 'URL Slug:') }}
         {{ Form::text('slug', null, array('class' => 'form-control')) }}
 
         {{ Form::label('course_id', 'Course:') }}
@@ -38,7 +38,7 @@
         {{ Form::label('description', 'Project Description:') }}
         {{ Form::textarea('description', null, array('class' => 'form-control')) }}
 
-        {{ Form:: submit('Create Project', array('class' => 'btn btn-success btn-large btn-block', 'style' => 'margin-top:20px')) }}
+        {{ Form::submit('Create Project', array('class' => 'btn btn-success btn-large btn-block', 'style' => 'margin-top:20px')) }}
       {!! Form::close() !!}
     </div>
   </div>

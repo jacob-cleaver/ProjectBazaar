@@ -1,0 +1,40 @@
+@import "variables";
+
+.comment {
+  margin-bottom: 50px;
+}
+
+.comment-title {
+  margin-bottom: 45px;
+
+  &span {
+  margin-right: 15px;
+  }
+}
+
+.author-image {
+  border: 2px solid $white;
+  border-radius: 50%;
+  float: left;
+}
+
+.author-name {
+  float: left;
+  margin-left: 25px;
+
+  &h4 {
+    margin: 0 0;
+  }
+}
+
+.author-time {
+  font-size: 11px;
+  color: $turquoise;
+}
+
+.comment-content {
+  clear: both;
+  margin-left: 75px;
+  font-size: 16px;
+  line-height: 1.3em;
+}
