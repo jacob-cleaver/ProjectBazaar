@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(['middleware' => 'web'], function() {
+// Route::group(['middleware' => 'web'], function() {
     Route::get('/', function () {
       return view('pages.home');
     });
@@ -50,4 +50,4 @@ Route::group(['middleware' => 'web'], function() {
     Route::put('comments/{id}', ['uses' => 'CommentsController@update', 'as' => 'comments.update']);
     Route::delete('comments/{id}', ['uses' => 'CommentsController@destroy', 'as' => 'comments.destroy']);
     Route::get('comments/{id}/delete', ['uses' => 'CommentsController@delete', 'as' => 'comments.delete']);
-});
+// });

@@ -4,7 +4,7 @@
   @include('partials._head')
 </head>
 
-<body id="app-layout">
+<body>
   @include('partials._nav')
 
   <div class="container">
