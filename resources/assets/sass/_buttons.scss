@@ -1,0 +1,17 @@
+@import 'variables';
+
+.btn-turquoise {
+  background-color: transparent;
+  border: 1px solid $turquoise;
+  border-radius: 7px;
+  color: $white;
+
+  &:hover {
+    background-color: $turquoise;
+    color: $white;
+  }
+}
+
+.btn-h1-spacing {
+  margin-top: 20px;
+}
