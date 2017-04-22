@@ -11,7 +11,7 @@ class PagesController extends Controller {
   }
 
   public function getProjectIdeas() {
-    $projects = Project::orderBy('created_at', 'desc')->paginate(10);
+    $projects = Project::orderBy('created_at', 'desc')->paginate(5);
     return view('pages.projectIdeas')->withProjects($projects);
   }
 
@@ -19,12 +19,20 @@ class PagesController extends Controller {
     return view('pages.about');
   }
 
+  public function getContact() {
+    return view('pages.contact');
+  }
+
   public function getLearnMore() {
     return view('pages.learnmore');
   }
 
-  public function getProfile() {
-    return view('pages.profile');
+  public function getExamplar() {
+    return view('pages.examplar');
+  }
+
+  public function getSettings() {
+    return view('pages.settings');
   }
 
 }

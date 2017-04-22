@@ -21,6 +21,7 @@
           <tr>
             <th>{{ $course->id }}</th>
             <td>{{ $course->name }}</td>
+            <td><a href="{{ route('courses.delete', $course->id) }}" class="btn btn-xs btn-danger fa fa-trash"></a></td>
           </tr>
           @endforeach
         </tbody>

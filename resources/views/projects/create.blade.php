@@ -22,7 +22,7 @@
 
       {!! Form::open(array('route' => 'projects.store')) !!}
         {{ Form::label('title', 'Title:') }}
-        {{ Form::text('title', null, array('class' => 'form-control input-lg')) }}
+        {{ Form::text('title', null, array('class' => 'form-control input-lg', 'placeholder' => 'Title')) }}
 
         {{ Form::label('slug', 'URL Slug:') }}
         {{ Form::text('slug', null, array('class' => 'form-control')) }}

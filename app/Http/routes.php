@@ -29,8 +29,10 @@
     Route::get('home', 'PagesController@getHome');
     Route::get('projectIdeas', 'PagesController@getProjectIdeas');
     Route::get('about', 'PagesController@getAbout');
+    Route::get('contact', 'PagesController@getContact');
     Route::get('learnmore', 'PagesController@getLearnMore');
-    // Route::get('settings', 'SettingsController@index');
+    Route::get('examplar', 'PagesController@getExamplar');
+    Route::get('settings', 'PagesController@getSettings');
     // Route::get('addAccounts', 'AddAccountController@index');
     // Route::get('removeAccounts', 'RemoveAccountController@index');
     Route::get('profile', 'PagesController@getProfile');
@@ -43,6 +45,8 @@
     // A route for create is not wanted therefore it an parameter has been set to not include a create for the courses
     // This will avoid an error if a user manages to type the url in as it will no longer exist
     Route::resource('courses', 'CourseController', ['except' => ['create']]);
+    Route::delete('courses/{id}', ['uses' => 'CourseController@destroy', 'as' => 'courses.destroy']);
+    Route::get('courses/{id}/delete', ['uses' => 'CourseController@delete', 'as' => 'courses.delete']);
 
     // Comments (Manually)
     Route::post('comments/{project_id}', ['uses' => 'CommentsController@store', 'as' => 'comments.store']);

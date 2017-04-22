@@ -19,17 +19,21 @@
 
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
           <!-- Left Side Of Navbar -->
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav btn-navbar">
             @if (Auth::guest())
-              <li class="{{ Request::is('/') ? "active" : "" }} btn-navbar"><a href="{{ url('/home') }}">Home</a></li>
-              <li class="{{ Request::is('/projectIdeas') ? "active" : "" }} btn-navbar"><a href="{{ url('/projectIdeas') }}">Project Ideas</a></li>
-              <li class="{{ Request::is('/about') ? "active" : "" }} btn-navbar"><a href="{{ url('/about') }}">About</a></li>
+              <li><a href="{{ url('/home') }}">Home</a></li>
+              <li><a href="{{ url('/projectIdeas') }}">Project Ideas</a></li>
+              <li><a href="{{ url('/examplar') }}">Previous Projects</a></li>
+              <li><a href="{{ url('/about') }}">About</a></li>
+              <li><a href="{{ url('/contact') }}">Contact</a></li>
             @else
-              <li class="{{ Request::is('/') ? "active" : "" }} btn-navbar"><a href="{{ url('/home') }}">Home</a></li>
-              <li class="{{ Request::is('/projectIdeas') ? "active" : "" }} btn-navbar"><a href="{{ url('/projectIdeas') }}">Project Ideas</a></li>
+              <li><a href="{{ url('/home') }}">Home</a></li>
+              <li><a href="{{ url('/projectIdeas') }}">Project Ideas</a></li>
+              <li><a href="{{ url('/examplar') }}">Previous Projects</a></li>
+              <li><a href="{{ url('/about') }}">About</a></li>
+              <li><a href="{{ url('/contact') }}">Contact</a></li>
               <li><a href="{{ route('projects.index') }}"><i class="fa fa-btn fa-lightbulb-o"></i>Project Ideas</a></li>
               <li><a href="{{ route('courses.index') }}"><i class="fa fa-btn fa-list-alt"></i>Courses</a></li>
-              <li class="{{ Request::is('/about') ? "active" : "" }} btn-navbar"><a href="{{ url('/about') }}">About</a></li>
             @endif
           </ul>
 
@@ -37,8 +41,7 @@
           <ul class="nav navbar-nav navbar-right">
               <!-- Authentication Links -->
               @if (Auth::guest())
-                  <li><a href="{{ url('/login') }}" class="btn-signin">Sign in</a></li>
-                  <li><a href="{{ url('/register') }}" class="btn-signup">Sign up</a></li>
+                  <li><a href="{{ url('/login') }}" class="btn-turquoise">Sign in</a></li>
               @else
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">

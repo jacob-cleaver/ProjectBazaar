@@ -4,7 +4,7 @@
   background: rgba($container-grey, .2);
   text-align: center;
   border: .5px solid rgba($white, .1);
-  color: $white;
+  color: $dark-grey-text;
   padding-left: 80px;
   padding-right: 80px;
   margin-top: 10px;
@@ -12,6 +12,6 @@
   &:hover {
     background: rgba($turquoise, .8);
     text-decoration: none;
-    color: $white;
+    color: $dark-grey-text;
   }
 }

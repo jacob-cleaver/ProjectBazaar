@@ -5956,43 +5956,22 @@ a {
     width: 100%; } }
 
 .dropdown-menu {
-  background-color: transparent; }
+  background-color: #00b2a7; }
 
 #navbar-default {
-  color: #fff;
+  color: #333;
   display: block;
   height: 150px;
   z-index: 4; }
   #navbar-default .navbar-nav > li > a {
-    color: #fff;
+    color: #333;
     margin-left: 10px;
     margin-top: 50px;
     padding: 10px; }
 
-.navbar-nav .btn-signup {
-  border: 1px solid #00b2a7;
-  border-radius: 7px; }
-  .navbar-nav .btn-signup:hover {
-    background: #00b2a7;
-    color: #fff; }
-  .navbar-nav .btn-signup:active {
-    background: #00b2a7;
-    color: #fff; }
-
 .navbar-nav > li > a:hover {
-  border-bottom: 1px solid #00b2a7;
-  color: #fff; }
-
-.active {
-  border-bottom: 1px solid #00b2a7;
-  color: #fff; }
-
-.btn-signin {
-  color: #fff; }
-
-.btn-signin:hover {
-  background-color: transparent;
-  color: #00b2a7; }
+  border-bottom: 3px solid #00b2a7;
+  color: #333; }
 
 .comment {
   margin-bottom: 50px; }
@@ -6027,10 +6006,11 @@ a {
   background-color: transparent;
   border: 1px solid #00b2a7;
   border-radius: 7px;
-  color: #fff; }
+  color: #333; }
   .btn-turquoise:hover {
     background-color: #00b2a7;
-    color: #fff; }
+    color: #333;
+    border: 3px solid #00b2a7; }
 
 .btn-h1-spacing {
   margin-top: 20px; }
@@ -6039,39 +6019,28 @@ a {
   background: rgba(245, 245, 245, 0.2);
   text-align: center;
   border: 0.5px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: #333;
   padding-left: 80px;
   padding-right: 80px;
   margin-top: 10px; }
   .projects:hover {
     background: rgba(0, 178, 167, 0.8);
     text-decoration: none;
-    color: #fff; }
+    color: #333; }
 
 body {
-  background: url("/images/background-image.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
-  height: 100%;
-  left: 0;
-  position: relative;
-  top: 0;
-  width: 100%;
-  z-index: -1; }
+  background-color: #bbb;
+  color: #333; }
 
 .custom-div {
   background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 100px 0 #000;
-  color: #fff;
+  color: #bbb;
   font-size: 20px;
   height: 800px;
   padding: 50px;
   text-align: center; }
 
 .transparent-div {
-  color: #fff;
   font-family: sans-serif;
   font-size: 20px;
   font-weight: bolder;
@@ -6083,14 +6052,19 @@ body {
 .carousel-control.right {
   background-image: none; }
 
+.carousel-control.left {
+  margin-right: 200px; }
+
+.panel {
+  background-color: transparent;
+  color: #333;
+  box-shadow: none; }
+  .panel .panel-heading {
+    background-color: transparent;
+    font-weight: bold;
+    border: none; }
+
 .panel-default {
   border: 0; }
-  .panel-default .panel-heading {
-    background-color: rgba(187, 187, 187, 0.2);
-    border: 0;
-    color: #fff; }
-  .panel-default .panel {
-    background-color: rgba(245, 245, 245, 0.2);
-    color: #fff; }
 
 /*# sourceMappingURL=app.css.map */

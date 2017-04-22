@@ -7,58 +7,52 @@
 @import 'projects';
 
 body {
-  background: url('/images/background-image.jpg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
-  height: 100%;
-  left: 0;
-  position: relative;
-  top: 0;
-  width: 100%;
-  z-index: -1;
+    background-color: $grey;
+    color: $dark-grey-text;
 }
-
 // DIVS
+
 .custom-div {
-  background-color: rgba($black, .7);
-  box-shadow: 0 0 100px 0 $black;
-  color: $white;
-  font-size: 20px;
-  height: 800px;
-  padding: 50px;
-  text-align: center;
+    background-color: rgba($black, .7);
+    color: $grey;
+    font-size: 20px;
+    height: 800px;
+    padding: 50px;
+    text-align: center;
 }
 
 .transparent-div {
-  color: $white;
-  font-family: sans-serif;
-  font-size: 20px;
-  font-weight: bolder;
-  height: 800px;
-  padding: 50px;
-  text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    height: 800px;
+    padding: 50px;
+    text-align: center;
 }
-
 // CAROUSEL
+
 .carousel-control.left,
 .carousel-control.right {
-  background-image: none;
+    background-image: none;
 }
 
+.carousel-control.left {
+  margin-right: 200px;
+}
 // PANEL
+
+.panel {
+    background-color: transparent;
+    color: $dark-grey-text;
+    box-shadow: none;
+
+    .panel-heading {
+        background-color: transparent;
+        font-weight: bold;
+        border: none;
+    }
+}
+
 .panel-default {
-  border: 0;
-
-  .panel-heading {
-    background-color: rgba($grey, .2);
     border: 0;
-    color: $white;
-  }
-
-  .panel {
-    background-color: rgba($container-grey, .2);
-    color: $white;
-  }
 }

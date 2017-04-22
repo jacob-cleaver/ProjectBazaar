@@ -20,7 +20,6 @@
     <div class="col-md-12">
       <table class="table">
         <thead>
-          <th>#</th>
           <th>Title</th>
           <th>Decription</th>
           <th>Created At</th>
@@ -30,7 +29,6 @@
         <tbody>
           @foreach ($projects as $project)
             <tr>
-              <th>{{ $project->id }}</th>
               <td>{{ $project->title }}</td>
               <!-- This is pulling in the project description from the databse and setting the description length to -->
               <!-- 50 characters to be displayed -->

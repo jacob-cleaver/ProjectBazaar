@@ -48,38 +48,9 @@ class CourseController extends Controller
         return redirect()->route('courses.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+    public function delete($id) {
+      $course = Course::find($id);
+      return view('courses.delete')->withCourse($course);
     }
 
     /**
@@ -90,6 +61,10 @@ class CourseController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $course = Course::find($id);
+      $course->delete();
+
+      Session::flash('success', 'The Course Was Successfully Deleted!');
+      return redirect()->route('courses.index');
     }
 }

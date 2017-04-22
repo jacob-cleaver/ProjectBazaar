@@ -7,8 +7,6 @@
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Reset Password</div>
-
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/password/reset') }}">
                         {{ csrf_field() }}

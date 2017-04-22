@@ -6,8 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-            <div class="panel panel-default" style="margin-top:180px;">
-                <div class="panel-heading">Sign in</div>
+            <div class="panel panel-default">
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}" style="padding-top:35px; padding-bottom:20px; margin-left:-50px;">
                         {{ csrf_field() }}
