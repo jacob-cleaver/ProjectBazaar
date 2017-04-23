@@ -12,7 +12,7 @@
 
           <!-- Branding Image -->
           <a class="navbar-brand" href="{{ url('/') }}">
-              <img src="/images/pb-turquoise.png" alt="Project Bazaar" height="auto" width="80" style="margin-top:25px;"/>
+              <img src="/images/pb-orange.png" alt="Project Bazaar" height="auto" width="80" style="margin-top:25px;"/>
           </a>
       </div>
 

@@ -2,14 +2,14 @@
 
 .btn-turquoise {
   background-color: transparent;
-  border: 1px solid $turquoise;
+  border: 1px solid $orange;
   border-radius: 7px;
   color: $dark-grey-text;
 
   &:hover {
-    background-color: $turquoise;
+    background-color: $orange;
     color: $dark-grey-text;
-    border: 3px solid $turquoise;
+    border: 1px solid $orange;
   }
 }
 
