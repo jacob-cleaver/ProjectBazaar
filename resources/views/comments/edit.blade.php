@@ -3,8 +3,8 @@
 @section('title', '| Edit Comment')
 
 @section('content')
-<div class="row">
-  <div class="col-md-8 col-md-offset-2">
+<div class="row"><!-- start row -->
+  <div class="col-md-8 col-md-offset-2"><!-- start col -->
     <h1>Edit Comment</h1>
 
     {{ Form::model($comment, ['route' => ['comments.update', $comment->id], 'method' => 'PUT']) }}
@@ -21,6 +21,6 @@
       {{ Form::submit('Update Comment', ['class' => 'btn btn-block btn-success']) }}
 
     {{ Form::close() }}
-  </div>
-</div>
+  </div><!-- end col -->
+</div><!-- end row -->
 @endsection

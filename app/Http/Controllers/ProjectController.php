@@ -39,6 +39,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
+        //Create a new course and retun user to projects create
         $courses = Course::all();
         return view('projects.create')->withCourses($courses);
 
@@ -52,7 +53,7 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        // validate the data to ensure there is no malicious data entered
+        // validate the data to ensure there is no malicious data entered and all fields have been entered by the user
         $this->validate($request, array(
           'title'       => 'required|max:100',
           'slug'        => 'required|alpha_dash|min:5|max:255|unique:projects,slug',
@@ -60,7 +61,10 @@ class ProjectController extends Controller
           'description' => 'required'
         ));
 
-        // store in the database
+        /**
+        * Store the project in the database with the following fields in the database, title, slug, course and desc
+        *
+        */
         $project = new Project;
 
         $project->title = $request->title;
@@ -70,6 +74,7 @@ class ProjectController extends Controller
 
         $project->save();
 
+        //Save the project in the database and display success flash message
         Session::flash('success', 'Project successfully created!');
 
         //redirect to another page

@@ -1,11 +1,11 @@
 @import 'variables';
-
+//Turquoise colours used throughout the application
 .btn-turquoise {
   background-color: transparent;
   border: 1px solid $orange;
   border-radius: 7px;
   color: $dark-grey-text;
-
+//Hover states
   &:hover {
     background-color: $orange;
     color: $dark-grey-text;

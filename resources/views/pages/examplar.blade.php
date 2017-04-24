@@ -3,9 +3,10 @@
 @section('title', '| Examplar')
 
 @section('content')
-  <div class="row">
+  <div class="row"><!-- start row -->
     <div class="col-md-10 col-md-offset-1">
       <h1>Previous Projects</h1>
+      <!-- display projects in table -->
       <table class="table">
         <thead>
           <th>Title</th>
@@ -21,6 +22,7 @@
             </tr>
         </tbody>
       </table>
-  </div> <!-- end of .row -->
+  </div><!-- end col -->
+</div><!-- end of .row -->
 
 @endsection

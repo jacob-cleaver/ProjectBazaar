@@ -16,6 +16,7 @@
 
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
+      <!-- display all projects along with title, description and course name -->
       <h1>{{ $project->title }}</h1>
       <p>{{ $project->description }}</p>
       <br/>
@@ -24,7 +25,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row"><!-- start row -->
     <div class="col-md-8 col-md-offset-2">
       <h3 class="comment-title"><span class="fa fa-comments"></span> {{ $project->comments()->count() }} Comments</h3>
       <div class="row">
@@ -73,6 +74,6 @@
 
 
     </div>
-  </div>
+  </div><!-- end row -->
 
 @endsection

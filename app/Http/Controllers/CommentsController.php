@@ -22,7 +22,11 @@ class CommentsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request, $project_id)
-    {
+        {
+          /**
+          *Validating name, email and comment from the user. If a requirement from the array is missing, validation will fail
+          *Name of author is set to maximum os 255 characters, email is set to max 255 characters and comment is set to max 2000 characters.
+          */
         $this->validate($request, array(
           'name'    => 'required|max:255',
           'email'   => 'required|email|max:255',
@@ -31,6 +35,8 @@ class CommentsController extends Controller
 
         $project = Project::find($project_id);
 
+        //Find the project ID and add the variable of new comment passing in the variables stated above.
+
         $comment = new Comment();
         $comment->name = $request->name;
         $comment->email = $request->email;
@@ -38,11 +44,11 @@ class CommentsController extends Controller
         $comment->approved = true;
         $comment->project()->associate($project);
 
-        $comment->save();
+        $comment->save();//Saving the comment
 
-        Session::flash('success', 'Comment was added');
+        Session::flash('success', 'Comment was added');//Fash message to display that the comment was successfully added
 
-        return redirect()->route('projects.idea', [$project->slug]);
+        return redirect()->route('projects.idea', [$project->slug]);//This will return the user to the route ideas with the comment added
     }
 
     /**
@@ -53,7 +59,7 @@ class CommentsController extends Controller
      */
     public function edit($id)
     {
-        $comment = Comment::find($id);
+        $comment = Comment::find($id);//find the comment from the database and return user to the view comments edit
         return view('comments.edit')->withComment($comment);
     }
 
@@ -72,12 +78,14 @@ class CommentsController extends Controller
         $comment->comment = $request->comment;
         $comment->save();
 
+        //Flash message to user to show success comment updated
         Session::flash('success', 'Comment Updated!');
 
         return redirect()->route('projects.show', $comment->project->id);
     }
 
     public function delete($id) {
+      //Find associated comment and destory
       $comment = Comment::find($id);
       return view('comments.delete')->withComment($comment);
     }

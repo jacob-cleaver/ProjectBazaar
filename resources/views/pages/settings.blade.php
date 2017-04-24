@@ -3,12 +3,13 @@
 @section('title', '| Settings')
 
 @section('content')
-<div class="container">
-    <div class="row">
+<div class="container"><!-- start container -->
+    <div class="row"><!-- start row -->
         <div class="col-sm-12">
             <div class="panel panel-default" style="margin-top:180px;">
                 <div class="panel-body">
                   <div class="col-sm-10 col-sm-offset-1">
+                    <!-- show profile picture/avatar -->
                       <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">
                       <form enctype="multipart/form-data" action="/settings" method="POST" style="width:150px; float:left; margin-top:30px;">
                           <label>Update Profile Picture</label>
@@ -21,5 +22,5 @@
             </div>
         </div>
     </div>
-</div>
+</div><!-- end container -->
 @endsection

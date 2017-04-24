@@ -12,6 +12,7 @@ class Project extends Model
   }
 
   public function comments() {
+    // Defining the one-to-one or many-to-one relationship
     return $this->hasMany('App\Comment');
   }
 }

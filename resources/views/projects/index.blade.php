@@ -3,21 +3,23 @@
 @section('title', '| Projects')
 
 @section('content')
-  <div class="row">
+  <div class="row"><!-- start row -->
+    <div class="col-md-8 col-md-offset-2">
     <div class="col-md-10">
       <h1>Projects</h1>
     </div>
-
+    <!-- Project create  using the route project create and display bootstrap large primary button to create -->
     <div class="col-md-2">
       <a href="{{ route('projects.create') }}" class="btn btn-large btn-block btn-primary btn-h1-spacing">Create New Project</a>
     </div>
     <div class="col-md-12">
       <hr>
     </div>
+  </div>
   </div> <!-- end of .row -->
 
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-8 col-md-offset-2">
       <table class="table">
         <thead>
           <th>Title</th>

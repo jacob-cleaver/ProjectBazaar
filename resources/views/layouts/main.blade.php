@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- MASTER BLADE to include all partials such as head, nav, messages, footer and javascript -->
 <head>
   @include('partials._head')
 </head>

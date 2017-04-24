@@ -30,12 +30,8 @@
     Route::get('projectIdeas', 'PagesController@getProjectIdeas');
     Route::get('about', 'PagesController@getAbout');
     Route::get('contact', 'PagesController@getContact');
-    Route::get('learnmore', 'PagesController@getLearnMore');
     Route::get('examplar', 'PagesController@getExamplar');
     Route::get('settings', 'PagesController@getSettings');
-    // Route::get('addAccounts', 'AddAccountController@index');
-    // Route::get('removeAccounts', 'RemoveAccountController@index');
-    Route::get('profile', 'PagesController@getProfile');
     Route::post('settings', 'UserController@update_avatar');
 
     // Projects

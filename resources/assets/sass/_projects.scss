@@ -1,5 +1,5 @@
 @import 'variables';
-
+//Project styling compoments
 .projects {
   background: rgba($container-grey, .2);
   text-align: center;
@@ -8,7 +8,7 @@
   padding-left: 80px;
   padding-right: 80px;
   margin-top: 10px;
-
+//Project hover states
   &:hover {
     background: rgba($orange, .8);
     text-decoration: none;

@@ -5,13 +5,14 @@
 @section('content')
   <div class="row">
     <div class="col-md-8">
+      <!-- display project title, description-->
        <h1>{{ $project->title }}</h1>
        <p class="lead">{{ $project->description }}</p>
        <hr>
        <p>Course: {{ $project->course->name }}</p>
-
+       <!-- Show a count of commets -->
       <div id='backend-comments' style="margin-top: 50px;">
-        <h3>Comments <small>{{ $project->comments->count() }} total</small></h3>
+        <h3>Comments <small style="color: orange;">{{ $project->comments->count() }} total</small></h3>
 
         <table class="table">
           <thead>
@@ -24,6 +25,7 @@
           </thead>
 
           <tbody>
+            <!-- For each project display the name of author, email and comment content -->
             @foreach($project->comments as $comment)
               <tr>
                 <td>{{ $comment->name }}</td>
@@ -65,7 +67,7 @@
           <p>{{ date('M j Y H:i', strtotime($project->updated_at)) }}</p>
         </dl>
         <hr>
-        <div class="row">
+        <div class="row"><!-- start row -->
           <div class="col-sm-6">
             {!! Html::linkRoute('projects.edit', 'Edit', array($project->id), array('class' => 'btn btn-primary btn-block')) !!}
           </div>
@@ -78,7 +80,7 @@
           <div class="col-sm-12">
             <a href="{{ route('projects.index') }}" class="btn btn-default btn-block">Back</a>
           </div>
-        </div>
+        </div><!-- end row -->
       </div>
     </div>
   </div>
